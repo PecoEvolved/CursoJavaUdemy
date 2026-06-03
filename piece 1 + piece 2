@@ -1,0 +1,34 @@
+package operadores_print_scanner;
+
+import java.util.Scanner;
+
+public class exercico5 {
+    public static void main(String[] args) {
+        int cod1, cod2, quant1, quant2;
+        float valorPeca1, valorPeca2, valoFinal;
+
+        Scanner sc = new Scanner(System.in);
+
+        //primeira peça
+        System.out.println("Digite o codigo da primeira peça: ");
+        cod1 = sc.nextInt();
+        System.out.println("Digite a quantidade de peças: ");
+        quant1 = sc.nextInt();
+        System.out.println("Digite o valor da peça: ");
+        valorPeca1 = sc.nextFloat();
+
+        //segunda peça
+        System.out.println("Digite o codigo da segunda peça: ");
+        cod2 = sc.nextInt();
+        System.out.println("Digite a quantidade de peças: ");
+        quant2 = sc.nextInt();
+        System.out.println("Digite o valor da peça: ");
+        valorPeca2 = sc.nextFloat();
+
+        valoFinal = (quant1 * valorPeca1) + (quant2 * valorPeca2);
+
+        System.out.printf("Codigos: %d, %d%n", cod1, cod2);
+        System.out.println("Quantidade de itens: " + (quant1 + quant2));
+        System.out.printf("Valor a pagar: R$ %.2f", valoFinal);
+    }
+}
