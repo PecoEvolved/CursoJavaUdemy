@@ -1,0 +1,44 @@
+package estrutura_repeticao;
+
+import java.util.Scanner;
+
+public class exec3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int codigo;
+        int cont_alcool = 0;
+        int cont_gasolina = 0;
+        int cont_Diesel = 0;
+
+        String menu = "1 - Alcool\n2 - Gasolina\n3 - Diesel\n4 - Fim\nDigite a preerencia: ";
+
+        System.out.println(menu);
+        codigo = sc.nextInt();
+
+        while (codigo != 4) {
+            switch (codigo) {
+                case 1:
+                    cont_alcool += 1;
+                    break;
+                case 2:
+                    cont_gasolina += 1;
+                    break;
+                case 3:
+                    cont_Diesel += 1;
+                    break;
+                default:
+                    System.out.println("Opção invalida!");
+            }
+            System.out.println(menu);
+            codigo = sc.nextInt();
+        }
+
+        System.out.println("MUITO OBRIGADO!");
+        System.out.println("Alcool: " + cont_alcool);
+        System.out.println("Gasolina: " + cont_gasolina);
+        System.out.println("Diesel: " + cont_Diesel);
+
+        sc.close();
+    }
+}
