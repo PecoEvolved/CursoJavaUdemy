@@ -1,0 +1,23 @@
+package operadores_print_scanner;
+
+import java.util.Scanner;
+
+public class exercicio2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        float area, raio;
+        float pi = 3.14159f;
+
+
+
+        System.out.println("Calcular área circulo, digite o raio: ");
+        raio = sc.nextFloat();
+
+        area = (float) (pi * Math.pow(raio, 2.0));
+
+        System.out.printf("area do circulo é = %.4f%n", area);
+
+
+    }
+}
